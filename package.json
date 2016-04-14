@@ -1,0 +1,25 @@
+{
+  "name": "redditjs",
+  "version": "1.0.0",
+  "description": "Reddit clone built with React, Node, Express, and Mongo.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theavish/redditJS.git"
+  },
+  "author": "Avi Samloff <avi.samloff@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theavish/redditJS/issues"
+  },
+  "homepage": "https://github.com/theavish/redditJS#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}
