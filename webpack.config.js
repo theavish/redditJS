@@ -12,8 +12,9 @@ module.exports = {
 
   module: {
     loaders: [{
-      include: __dirname + '/client/src',
-      loader: 'babel'
+      include: __dirname + '/client',
+      loader: 'babel-loader',
+      test: /\.js$/
     }]
   },
 
