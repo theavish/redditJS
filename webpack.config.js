@@ -1,23 +1,28 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: __dirname + '/client/index.html',
+  filename: 'index.html',
+  inject: 'body'
+});
+
 module.exports = {
   entry: [
     './client/src/index.js'
   ],
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
+
   module: {
     loaders: [{
-      exclude: /node_modules/,
+      include: __dirname + '/client/src',
       loader: 'babel'
     }]
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
+
+  output: {
+    filename: 'appBundle.js',
+    path: __dirname + '/client/dist'
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+
+  plugins: [
+    HtmlWebpackPluginConfig
+  ]
 };
