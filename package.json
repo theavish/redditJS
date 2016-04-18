@@ -4,7 +4,8 @@
   "description": "Reddit clone built with React, Node, Express, and Mongo.",
   "main": "server/server.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start-server": "nodemon server/server.js",
+    "watch-client": "webpack --watch"
   },
   "repository": {
     "type": "git",
